@@ -30,8 +30,7 @@ function loadGoogleMaps(apiKey) {
 }
 
 function initMap() {
-    console.log("Center : " + latitude + " , " + longitude);
-    var DefaultPlace = { lat: latitude, lng: longitude };
+    var DefaultPlace = { lat: parseFloat(latitude), lng: parseFloat(longitude) };
     new google.maps.Map(document.getElementById('map'), {
         center: DefaultPlace,
         zoom: 8,
